@@ -55,19 +55,22 @@ while not done:
             if event.key == pygame.K_s:
                 #start game
                 pygame. display. toggle_fullscreen()
-                if (selected==1):
+                if (selected==0):
                     os.chdir("C:\m2emulator")
                     subprocess.Popen("emulator_multicpu.exe dayton93")
-                if (selected==2):
+                if (selected==1):
                     os.chdir("C:\m2emulator")
                     subprocess.Popen("emulator_multicpu.exe srallycb")
-                if (selected==3):
+                if (selected==2):
                     os.chdir("C:\m2emulator_multi")
                     subprocess.Popen("emulator_multicpu.exe daytona")
-                if (selected==4):
+                if (selected==3):
                     os.chdir("C:\m2emulator_multi")
                     subprocess.Popen("emulator_multicpu.exe srallycb")
-                
+                if (selected==4):
+                    done = True
+                    subprocess.Popen("shutdown /s")
+                    pygame.quit()
                 #print("launch ok ", selected)
                 done = True
                 pygame.quit()
